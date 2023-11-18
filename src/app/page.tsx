@@ -1,9 +1,12 @@
+import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 
 function HomePage() {
   return (
     <div>
-      My Home page!
+      <div>
+        <DocumentMagnifyingGlassIcon  />
+      </div>
     </div>
   )
 }
