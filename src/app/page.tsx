@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div>
       <div>
-        <DocumentMagnifyingGlassIcon className="w-64 h-64 text-i" />
+        <DocumentMagnifyingGlassIcon className="w-64 h-64 text-in" />
       </div>
     </div>
   )
