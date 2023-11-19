@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
 import './globals.css'
+import Sidebar from '../../components/Sidebar'
 
 const inter = Nunito_Sans({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
 
         {/* Sidebar */}
-
+        <Sidebar />
         <main>
           {/* Header */}
           {children}
