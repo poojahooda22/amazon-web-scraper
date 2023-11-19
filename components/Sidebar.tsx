@@ -6,7 +6,7 @@ function Sidebar() {
     return (
         <div>
             <div>
-                <DocumentMagnifyingGlassIcon className=""
+                <DocumentMagnifyingGlassIcon className="h-16"
             </div>
             Sidebar
         </div>
