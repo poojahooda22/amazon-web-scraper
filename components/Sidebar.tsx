@@ -4,6 +4,9 @@
 function Sidebar() {
     return (
         <div>
+            <div>
+                
+            </div>
             Sidebar
         </div>
     )
