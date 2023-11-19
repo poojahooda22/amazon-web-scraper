@@ -21,7 +21,7 @@ export default function RootLayout({
         {/* Sidebar */}
 
         <main>
-          {/*  */}
+          {/* Header */}
           {children}
         </main>
       </body>
