@@ -19,8 +19,9 @@ export default function RootLayout({
       <body className={inter.className}>
 
         {/* Sidebar */}
-        
+
         <main>
+          {/*  */}
           {children}
         </main>
       </body>
