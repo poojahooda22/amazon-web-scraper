@@ -11,7 +11,7 @@ function Header() {
             <input
                 type="text"
                 placeholder="Search..."
-                className='flex-1'
+                className='flex-1 outline-none bg-transparent'
             />
             
             <button hidden>Search</button>
