@@ -4,4 +4,6 @@ type Body = {
     search: string;
 }
 
-export async function POST(req: NextApiRequest) 
+export async function POST(req: NextApiRequest) {
+    
+}
