@@ -1,4 +1,4 @@
-import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 
 
@@ -16,8 +16,8 @@ function Sidebar() {
                     className="md:w-16 h-16 text-indigo-600" 
                 />
 
-                <h1 className="hidden md:inline text-center text-3xl mt-2 font-bold">Web Scraper</h1>
-                <h2 className="hidden  md:inline text-center text-xs italic">Scraping the UnScrapable</h2>
+                <h1 className="hidden md:inline text-center text-3xl mt-2 mb-2 font-bold">Web Scraper</h1>
+                <h2 className="hidden md:inline text-center text-xs italic">Scraping the UnScrapable</h2>
             </div>
 
 
