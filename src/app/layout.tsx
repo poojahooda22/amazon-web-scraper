@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
 import './globals.css'
-import Sidebar from '../../components/Sidebar'
+import Sidebar from '../components/Sidebar';
 
 const inter = Nunito_Sans({ subsets: ['latin'] })
 
