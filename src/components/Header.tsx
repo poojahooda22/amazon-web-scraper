@@ -36,7 +36,7 @@ function Header() {
             rounded-full py-2 px-4 bg-indigo-100 max-w-md mx-auto'
         >
             <input
-                type="text"
+                
                 placeholder="Search..."
                 className='flex-1 outline-none 
                 bg-transparent placeholder:text-indigo-300'
