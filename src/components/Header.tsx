@@ -39,7 +39,7 @@ function Header() {
                 type="text"
                 placeholder="Search..."
                 className='flex-1 outline-none 
-                bg-transparent pl'
+                bg-transparent pla'
                 ref={inputRef}
                 
             />
