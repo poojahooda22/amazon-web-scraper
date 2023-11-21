@@ -40,7 +40,7 @@ function Header() {
                 placeholder="Search..."
                 className='flex-1 outline-none 
                 bg-transparent placeholder:text-indigo-300'
-                ref={inputRef}
+                
                 
             />
             
