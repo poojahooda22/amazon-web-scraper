@@ -25,7 +25,8 @@ function Header() {
             //handle any errors
         }
 
-        //wait 
+        //wait for the response to come back
+    };
 
   return (
     <header>
