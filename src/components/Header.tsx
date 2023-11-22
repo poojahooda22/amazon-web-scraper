@@ -22,7 +22,7 @@ function Header() {
             // call our API to activate the Scraper...
             // /api/activeScraper
 
-            const response = await fetch("/activateScraper", {
+            const response = await fetch("/api/activateScraper", {
                 method: "POST",
                 headers: {
                     "Content-Type": "applications/json",
