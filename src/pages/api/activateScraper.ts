@@ -15,6 +15,8 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse<Data | Error>
 ) {
+    try {
+
     const { search } = req.body;
 
     console.log("Search is >>> ", search);
@@ -48,4 +50,8 @@ export default async function handler (
     })
 
     return res.status(200).json({ collection_id, start_eta, });
+    } catch(err: any) {
+        console.log("Error is >>>", err);
+        return res.status(500).json({ error: err.message });
+    }
 }
