@@ -25,7 +25,7 @@ function Header() {
             const response = await fetch("/api/activateScraper", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "applications/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ search: input }),
             })
