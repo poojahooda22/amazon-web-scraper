@@ -7,7 +7,7 @@ function Header() {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const handleSearch = (e: FormEvent<HTMLFormElement>) => {
+    const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const input = inputRef.current?.value;
@@ -26,8 +26,8 @@ function Header() {
                 method: "POST",
                 headers: {
                     "Content-Type": "applications/json",
-
-                }
+                },
+                body: JSON.stringify({ search: input }),
             })
         } catch (error) {
             //handle any errors
