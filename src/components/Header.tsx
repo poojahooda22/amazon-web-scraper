@@ -21,6 +21,8 @@ function Header() {
         try {
             // call our API to activate the Scraper...
             // /api/activeScraper
+
+            const
         } catch (error) {
             //handle any errors
         }
