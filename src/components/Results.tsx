@@ -8,7 +8,7 @@ type Props = {
 
 function Results({ results }: Props) {
   return (
-    <div className='grid lg:grid-cols-2 xl:grid-cols-4 gap-5 w-full'>
+    <div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full'>
         {results.map((result) => (
             <Link
                 href={result.url}
@@ -28,8 +28,8 @@ function Results({ results }: Props) {
                         {result.rating} ({result.reviews} reviews)
                     </p>
 
-                    <div>
-                        <p>
+                    <div className='flex items-center space-x-2 justify-end'>
+                        <p className='font-bold text-indigo-500 pt-2 text-xl mt-auto'>
                             {result.price > 0 ? `$${result.price}` :  "N/A"}
                         </p>
 
@@ -38,6 +38,21 @@ function Results({ results }: Props) {
                             pt-2'>
                                 ${result.previous_price}
                             </p>
+                        )}
+                    </div>
+
+                    <div className='flex flex-wrap gap-2'>
+                        {result.features.map(
+                            (feature) => 
+                            feature && (
+                                <p 
+                                    key={feature}
+                                    className='text-xs bg-indigo-500 text-white 
+                                    px-2 py-1 rounded-md'
+                                >
+                                    {feature}
+                                </p>
+                            )
                         )}
                     </div>
                 </div>
