@@ -27,6 +27,19 @@ function Results({ results }: Props) {
                     <p className='text-sm text-gray-500'>
                         {result.rating} ({result.reviews} reviews)
                     </p>
+
+                    <div>
+                        <p>
+                            {result.price > 0 ? `$${result.price}` :  "N/A"}
+                        </p>
+
+                        {result.previous_price > 0 && (
+                            <p className='font-bold text-indigo-500/50 line-through
+                            pt-2'>
+                                ${result.previous_price}
+                            </p>
+                        )}
+                    </div>
                 </div>
             </Link>
         ))}
