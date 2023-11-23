@@ -1,8 +1,18 @@
-import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
+'use client';
 
+import { DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { collection, orderBy, query } from "firebase/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { db } from "../../firebase";
+import SidebarRow from "./SidebarRow";
 
 
 function Sidebar() {
+    const [snapshot, loading, error] = useCollection(
+        query(collection(db, "searches"), orderBy("start_eta", "desc"))
+    );
+
+
     return (
         <div 
             className="p-2 md:p-10 py-6 overflow-y-auto bg-slate-100
@@ -21,7 +31,11 @@ function Sidebar() {
             </div>
 
 
-            <ul></ul>
+            <ul className="flex flex-col gap-2 py-2 overflow-x-auto">
+                {snapshot?.docs.map((doc) => (
+                    <SidebarRow key={doc.id} doc={doc} />
+                ))}
+            </ul>
         </div>
     )
 }
