@@ -1,11 +1,13 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import React, { FormEvent, useRef } from 'react'
+import React, { FormEvent, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 function Header() {
 
     const inputRef = useRef<HTMLInputElement>(null);
+    const router = useRouter();
 
     const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -28,7 +30,11 @@ function Header() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ search: input }),
-            })
+            });
+
+            const { collection_id, start_eta } = await response.json();
+
+            router.push(`/search/${collection_id}`);
         } catch (error) {
             //handle any errors
         }
