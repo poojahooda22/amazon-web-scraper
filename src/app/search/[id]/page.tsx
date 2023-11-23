@@ -4,7 +4,9 @@ import { doc } from "firebase/firestore";
 import { useDocument } from "react-firebase-hooks/firestore";
 import { db } from "../../../../firebase";
 import Results from "@/components/Results";
-
+import { useRouter } from "next/navigation";
+import { deleteDoc } from "firebase/firestore";
+import Spinner from 'react-spinkit'
 
 type Props = {
     params: {
@@ -14,6 +16,21 @@ type Props = {
 
 function SearchPage({ params: {id}}: Props) {
     const [snapshot, loading, error] = useDocument(doc(db, "searches", id));
+    const router = useRouter();
+
+    const handleDelete = () => {
+        deleteDoc(doc(db, "searches", id));
+        router.push("/");
+    };
+
+    const deleteButton = (
+        <button 
+            className="bg-indigo-600 text-white px-4 py-2 rounded-lg"
+            onClick={handleDelete}
+        >
+            Delete Search
+        </button>
+    )
 
     if(loading)
     return (
@@ -29,7 +46,17 @@ function SearchPage({ params: {id}}: Props) {
         <div className="flex flex-col gap-y-5 py-10 items-center justify-between">
             <p className="text-indigo-600 animate-pulse text-center">
                 Scraping results from Amazon
-            </p>    
+            </p>  
+            <Spinner
+                style={{
+                    height: "100px",
+                    width: "100px",
+                }}
+                name="cube-grid"
+                fadeIn="none"
+                color="indigo"
+            />
+            {deleteButton}
         </div>
     );
 
@@ -48,6 +75,7 @@ function SearchPage({ params: {id}}: Props) {
                         `${snapshot.data()?.results?.length} results found`}
                     </p>
                 </div>
+                {deleteButton}
             </div>
 
             {
