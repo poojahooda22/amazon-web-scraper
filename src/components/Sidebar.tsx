@@ -15,8 +15,8 @@ function Sidebar() {
 
     return (
         <div 
-            className="p-2 md:p-10 py-6 overflow-y-auto bg-slate-100
-            border-b border-indigo-400/20 "
+            className="p-2 md:p-10 py-6 overflow-y-auto 
+             border-indigo-400/20 "
         >
             <div 
                 className="flex flex-col items-center 
