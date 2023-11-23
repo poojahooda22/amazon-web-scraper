@@ -35,8 +35,8 @@ function SearchPage({ params: {id}}: Props) {
 
 
     return (
-        <div>
-            <div className="flex items-center  justify-between mb-7 mt-8">
+        <div className="py-5">
+            <div className="flex items-center  justify-between mb-7">
                 <div className="flex flex-col md:flex-row gap-x-4">
                     <h1 className="font-bold">
                         Search results for {" "}
