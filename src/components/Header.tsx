@@ -3,6 +3,7 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import React, { FormEvent, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 function Header() {
 
@@ -16,14 +17,14 @@ function Header() {
 
         if(!input) return;
 
+        const notification = toast.loading(`Starting a Scraper for: ${input}`);
+
         if(inputRef.current?.value) {
             inputRef.current.value = "";
         }
 
         try {
-            // call our API to activate the Scraper...
-            // /api/activeScraper
-
+          
             const response = await fetch("/api/activateScraper", {
                 method: "POST",
                 headers: {
@@ -34,9 +35,16 @@ function Header() {
 
             const { collection_id, start_eta } = await response.json();
 
+            toast.success("Scraper Started Successfully", {
+                id: notification,
+            })
+
             router.push(`/search/${collection_id}`);
         } catch (error) {
             //handle any errors
+            toast.error("Whoops... Something went wrong!", {
+                id: notification,
+            });
         }
 
         //wait for the response to come back

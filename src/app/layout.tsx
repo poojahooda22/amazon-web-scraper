@@ -3,6 +3,7 @@ import { Nunito_Sans } from 'next/font/google'
 import './globals.css'
 import Sidebar from '../components/Sidebar';
 import Header from '@/components/Header';
+import ClientProvider from '@/components/ClientProvider';
 
 const inter = Nunito_Sans({ subsets: ['latin'] })
 
@@ -19,14 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex h-screen bg-slate-100">
-
-        {/* Sidebar */}
-        <Sidebar />
-        <main className='p-10 max-w-7xl w-full mx-auto'>
-          {/* Header */}
-          <Header />
-          {children}
-        </main>
+        <ClientProvider>
+          {/* Sidebar */}
+          <Sidebar />
+          <main className='p-10 max-w-7xl w-full mx-auto'>
+            {/* Header */}
+            <Header />
+            {children}
+          </main>
+        </ClientProvider>
       </body>
     </html>
   )

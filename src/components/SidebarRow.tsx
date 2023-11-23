@@ -23,7 +23,7 @@ function SidebarRow({doc}: Props) {
 
   return (
     <li 
-        onClick={() => router.push(`search/${doc.id}`)}
+        onClick={() => router.push(`/search/${doc.id}`)}
         className={`flex justify-between p-4 cursor-pointer hover:bg-white 
         hover:shadow-md rounded-lg ${active && "bg-white shadow-md"}`}
     >
