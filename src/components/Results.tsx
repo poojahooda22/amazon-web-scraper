@@ -9,7 +9,7 @@ type Props = {
 function Results({ results }: Props) {
   return (
     <div 
-    className='grid lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full'>
+        className='grid lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full'>
         {results.map((result) => (
             <Link
                 href={result.url}
