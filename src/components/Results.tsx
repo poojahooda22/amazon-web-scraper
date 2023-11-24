@@ -16,7 +16,8 @@ function Results({ results }: Props) {
             <Link
                 href={result.url}
                 key={result.title}
-                className='flex flex-col space-x-4 w-full bg-white
+                className='flex flex-col space-x-4 w-full 
+                bg-white
                 rounded-lg shadow-md p-5'
             >
                 <img
