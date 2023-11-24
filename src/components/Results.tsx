@@ -40,7 +40,8 @@ function Results({ results }: Props) {
                         {result.rating} ({result.reviews} reviews)
                     </p>
 
-                    <div className='flex items-center space-x-2 justify-end'>
+                    <div 
+                    className='flex items-center space-x-2 justify-end'>
                         <p className='font-bold text-indigo-500 pt-2 text-xl mt-auto'>
                             {result.price > 0 ? `$${result.price}` :  "N/A"}
                         </p>
