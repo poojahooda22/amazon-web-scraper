@@ -26,7 +26,8 @@ function Results({ results }: Props) {
                     className='object-contain h-40 w-full py-5'
                 />
 
-                <div className='flex flex-col py-5 flex-1'>
+                <div 
+                className='flex flex-col py-5 flex-1'>
                     <p className='font-bold mb-4'>{result.title}</p>
                     <p className='text-sm text-gray-500'>
                         {result.rating} ({result.reviews} reviews)
