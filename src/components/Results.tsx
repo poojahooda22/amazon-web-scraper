@@ -35,7 +35,7 @@ function Results({ results }: Props) {
                         {result.title}
                     </p>
                     <p 
-                    className='text-sm text-gray-500'>
+                        className='text-sm text-gray-500'>
                         {result.rating} ({result.reviews} reviews)
                     </p>
 
