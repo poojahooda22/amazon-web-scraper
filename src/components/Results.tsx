@@ -27,7 +27,8 @@ function Results({ results }: Props) {
                 />
 
                 <div 
-                    className='flex flex-col py-5 flex-1'>
+                    className='flex flex-col py-5 flex-1'
+                >
                     <p className='font-bold mb-4'>{result.title}</p>
                     <p className='text-sm text-gray-500'>
                         {result.rating} ({result.reviews} reviews)
