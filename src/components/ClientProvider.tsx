@@ -10,6 +10,7 @@ export default function ClientProvider({
 }) {
     return (
         <>
+            {/* // This is the toast container */}
             <Toaster />
             {children}
         </>
