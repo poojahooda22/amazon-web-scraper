@@ -44,7 +44,8 @@ function Results({ results }: Props) {
                     <div 
                         className='flex items-center space-x-2 justify-end'
                     >
-                        <p className='font-bold text-indigo-500 pt-2 text-xl mt-auto'>
+                        <p 
+                        className='font-bold text-indigo-500 pt-2 text-xl mt-auto'>
                             {result.price > 0 ? `$${result.price}` :  "N/A"}
                         </p>
 
