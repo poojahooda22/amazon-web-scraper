@@ -63,7 +63,7 @@ function Results({ results }: Props) {
                     </div>
 
                     <div 
-                    className='flex flex-wrap gap-2'>
+                        className='flex flex-wrap gap-2'>
                         {result.features.map(
                             (feature) => 
                             feature && (
