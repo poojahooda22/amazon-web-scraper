@@ -55,7 +55,8 @@ function Results({ results }: Props) {
                             <p 
                                 className='font-bold text-indigo-500/50 
                                 line-through
-                                pt-2'>
+                                pt-2'
+                            >
                                 ${result.previous_price}
                             </p>
                         )}
