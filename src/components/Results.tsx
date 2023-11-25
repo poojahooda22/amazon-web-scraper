@@ -46,7 +46,8 @@ function Results({ results }: Props) {
                     >
                         <p 
                             className='font-bold text-indigo-500 pt-2 
-                            text-xl mt-auto'>
+                            text-xl mt-auto'
+                            >
                             {result.price > 0 ? `$${result.price}` :  "N/A"}
                         </p>
 
