@@ -65,7 +65,8 @@ function Header() {
                 ref={inputRef}               
             />
             
-            <button hidden>Search</button>
+            <button hidden>
+            Search</button>
             <MagnifyingGlassIcon className='h-6 w-6 text-indigo-300' />
         </form>
       
