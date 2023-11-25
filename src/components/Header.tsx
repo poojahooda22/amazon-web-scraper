@@ -68,7 +68,8 @@ function Header() {
             <button hidden>
                 Search
             </button>
-            <MagnifyingGlassIcon className='h-6 w-6 text-indigo-300' />
+            <MagnifyingGlassIcon 
+            className='h-6 w-6 text-indigo-300' />
         </form>
       
     </header>
