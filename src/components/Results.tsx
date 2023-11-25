@@ -70,7 +70,8 @@ function Results({ results }: Props) {
                             feature && (
                                 <p 
                                     key={feature}
-                                    className='text-xs bg-indigo-500 text-white 
+                                    className='text-xs bg-indigo-500 
+                                    text-white 
                                     px-2 py-1 rounded-md'
                                 >
                                     {feature}
